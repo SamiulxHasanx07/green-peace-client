@@ -1,18 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Row } from 'react-bootstrap';
 import SingleEvent from './SingleEvent/SingleEvent';
-import ChildSupport from '../../../images/images/childSupport.png';
-import RefugeShelter from '../../../images/images/refuseShelter.png';
-import FoodCharity from '../../../images/images/foodCharity.png';
-import ClothSwap from '../../../images/images/clothSwap.png';
+// import ChildSupport from '../../../images/images/childSupport.png';
+// import RefugeShelter from '../../../images/images/refuseShelter.png';
+// import FoodCharity from '../../../images/images/foodCharity.png';
+// import ClothSwap from '../../../images/images/clothSwap.png';
 import 'react-toastify/dist/ReactToastify.css';
 const AllEvents = () => {
-    const eData = [
-        { id: 1, eventName: 'Child Support', Image: ChildSupport },
-        { id: 2, eventName: 'Refuge shelter', Image: RefugeShelter },
-        { id: 3, eventName: 'Food Charity', Image: FoodCharity },
-        { id: 4, eventName: 'Host a clothing swap', Image: ClothSwap },
-    ]
+    // const eData = [
+    //     { id: 1, eventName: 'Child Support', Image: ChildSupport },
+    //     { id: 2, eventName: 'Refuge shelter', Image: RefugeShelter },
+    //     { id: 3, eventName: 'Food Charity', Image: FoodCharity },
+    //     { id: 4, eventName: 'Host a clothing swap', Image: ClothSwap },
+    // ]
 
     const [events, setEvents] = useState([])
     useEffect(() => {

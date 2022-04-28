@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Card, Col } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { toast, ToastContainer } from 'react-toastify';
@@ -7,9 +7,9 @@ import auth from '../../../../firebase.init';
 const SingleEvent = ({ event }) => {
     const [user] = useAuthState(auth)
     const { _id, eventName, image } = event;
+
     const handleSelect = (id) => {
         const data = { eventId: id, email: user.email, eventName: eventName, image: image };
-        console.log(data);
 
         fetch('http://localhost:5000/selected', {
             method: 'POST',
@@ -19,7 +19,7 @@ const SingleEvent = ({ event }) => {
             body: JSON.stringify(data)
         })
             .then(res => res.json())
-            .then(res => {
+            .then(data => {
                 toast.success('Event Selected Done!', {
                     position: "top-right",
                     autoClose: 2000,
@@ -28,9 +28,13 @@ const SingleEvent = ({ event }) => {
                     pauseOnHover: true,
                     draggable: true,
                     progress: undefined,
-                });
-            })
+
+                })
+            });
+
+        console.log('samiul');
     }
+
     return (
         <div>
             <Col>
