@@ -12,7 +12,7 @@ const AddEvents = () => {
 
         if (eventName.length > 3 && eventPhoto.length > 3) {
 
-            fetch('http://localhost:5000/event', {
+            fetch('https://grean-peace-2022.herokuapp.com/event', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'

@@ -6,7 +6,7 @@ import { toast, ToastContainer } from 'react-toastify';
 const Voulenteers = () => {
     const [voulenteers, setVoulenteers] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/volunteers')
+        fetch('https://grean-peace-2022.herokuapp.com/volunteers')
             .then(res => res.json())
             .then(data => setVoulenteers(data))
         console.log(voulenteers);
@@ -15,7 +15,7 @@ const Voulenteers = () => {
 
 
     const deleteVoluenteer = (id) => {
-        const url = `http://localhost:5000/deletevolunteers?_id=${id}`;
+        const url = `https://grean-peace-2022.herokuapp.com/deletevolunteers?_id=${id}`;
         fetch(url, {
             method: 'DELETE',
         })

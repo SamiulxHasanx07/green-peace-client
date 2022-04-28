@@ -10,7 +10,7 @@ const MyEvents = () => {
     const [selectedEvents, setSelectedEvents] = useState([])
 
     useEffect(() => {
-        const url = `http://localhost:5000/selected?email=${user?.email}`
+        const url = `https://grean-peace-2022.herokuapp.com/selected?email=${user?.email}`
         fetch(url)
             .then(res => res.json())
             .then(data => setSelectedEvents(data))

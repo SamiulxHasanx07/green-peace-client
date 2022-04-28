@@ -11,7 +11,7 @@ const SingleEvent = ({ event }) => {
     const handleSelect = (id) => {
         const data = { eventId: id, email: user.email, eventName: eventName, image: image };
 
-        fetch('http://localhost:5000/selected', {
+        fetch('https://grean-peace-2022.herokuapp.com/selected', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

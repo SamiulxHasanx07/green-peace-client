@@ -19,7 +19,7 @@ const Register = () => {
 
 
         if (name.length > 3 && email.length > 3) {
-            const url = `http://localhost:5000/volunteers?name=${data}`;
+            const url = `https://grean-peace-2022.herokuapp.com/volunteers?name=${data}`;
             fetch(url, {
                 method: 'POST',
                 headers: {

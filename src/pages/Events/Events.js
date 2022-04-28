@@ -6,17 +6,17 @@ const Events = () => {
 
     const [events, setEvents] = useState([])
 
-    // fetch(`http://localhost:5000/event/${id}`)
+    // fetch(`https://grean-peace-2022.herokuapp.com/event/${id}`)
 
     useEffect(() => {
-        fetch('http://localhost:5000/events')
+        fetch('https://grean-peace-2022.herokuapp.com/events')
             .then(res => res.json())
             .then(data => setEvents(data))
     }, [events])
 
     const handleDelete = (id) => {
         console.log(id);
-        const url = `http://localhost:5000/event/${id}`;
+        const url = `https://grean-peace-2022.herokuapp.com/event/${id}`;
         fetch(url, {
             method: "DELETE"
         })
